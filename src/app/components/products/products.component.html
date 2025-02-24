@@ -1,0 +1,17 @@
+<div class="products">
+@for (item of products; track $index) { 
+    <div class="item-tile">
+        <img [src]="item.imageSrc">
+        <div class="product-information">
+            <div>
+            <h4 class="item-name">{{item.product | titlecase}}</h4>
+            <p class="item-price">{{item.price}}</p>
+            </div>
+            <div class="quantity">
+                <button type="button-left" (click)="processOrder(item, -1)">-</button>
+                <button type="button-right" (click)="processOrder(item, 1)">+</button>
+            </div>
+        </div>
+    </div>
+}
+</div>
