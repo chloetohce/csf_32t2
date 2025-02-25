@@ -28,17 +28,17 @@ export class ProductsComponent implements OnInit{
       {
         product:'apple',
         price: 1.4,
-        quantity: 1,
+        quantity: 0,
         imageSrc: 'fruits/apple.png'
       },
       {
         product:'strawberry',
-        quantity: 1,
+        quantity: 0,
         price: 2.3,
         imageSrc: 'fruits/strawberry.png'
       }
     ]
-    console.log(this.products)
+    // console.log(this.products)
   }
 
   protected processOrder(item: Product, change: number) {

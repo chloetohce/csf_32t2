@@ -1,0 +1,75 @@
+.cart {
+    width: 50vw;
+}
+
+form {
+    width: 75%;
+    background-color: rgb(225, 241, 254);
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.input-box {
+    width: 85%;
+    
+}
+
+input {
+    width: 100%;
+    height: 2em;
+    border: 0px;
+    background-color: rgb(247, 252, 255);
+    border-radius: 10px;
+}
+
+.label-box {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+    font-size: small;
+    width: 15%;
+}
+
+table {
+    width: 100%;
+    padding: 5px;
+}
+
+th {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    font-weight: 300;
+    line-height: 2em;
+}
+
+td {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+}
+
+.cart-notification {
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: smaller;
+    color:darkslategray;
+}
+
+.total td {
+    padding-top: 5px;
+    margin-top: 10px;
+    padding-left: 0px;
+    border-top: 1px black solid;
+    border-spacing: 0px;
+    font-weight: 600;
+}
+
+.cart-products {
+    border-collapse: collapse;
+}
+
+.cart-products td {
+    padding: 10px;
+}
+
+

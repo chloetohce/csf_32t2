@@ -1,2 +1,4 @@
+<div style="display: flex; flex-direction: row;">
 <app-products (order)="whenOrder($event)"></app-products>
-<app-cart [order]="order"></app-cart>
+<app-cart [order]="order" [cartInput]="cart"></app-cart>
+</div>

@@ -12,28 +12,25 @@ export class AppComponent {
 
   order!: Order;
 
-  cart: Cart = {
-    name: '',
-    address: '',
-    cart: [],
-    total: 0,
-  };
+  cart: Product[] = [];
 
   protected whenOrder(order: Order) {
     const temp = order;
-    console.info(order);
+    // console.info(order);
     this.order = order;
     const product: Product = {
       ...order,
     };
 
-    let currProduct = this.cart.cart.find((val) => val.product == order.product)
+    let currProduct = this.cart.find((val) => val.product == order.product)
 
     if (currProduct) {
       currProduct.quantity += order.change;
     } else {
-      this.cart.cart.push(product);
+      product.quantity += order.change
+      this.cart.push(product);
     }
+    this.cart = this.cart.filter((val) => val.quantity > 0)
     console.log(this.cart)
   }
 }
