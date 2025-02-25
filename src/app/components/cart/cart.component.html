@@ -9,6 +9,19 @@
                 <td class="label-box"><label for="address">Address</label></td>
                 <td class="input-box"><input type="text" name="address" id="address" formControlName="address"></td>
             </tr>
+            <tr>
+                <td>Delivery</td>
+                <td class="radio">
+                    <div>
+                        <input type="radio" name="delivery" id="door-delivery" value="door-delivery" formControlName="delivery">
+                        <label for="door-delivery">Door delivery</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="delivery" id="self-pickup" value="self-pickup" formControlName="delivery">
+                        <label for="self-pickup">Self-pickup</label>
+                    </div>
+                </td>
+            </tr>
 
             <tr>
                 <td colspan="2">

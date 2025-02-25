@@ -24,6 +24,10 @@ input {
     border-radius: 10px;
 }
 
+input[disabled] {
+    background-color: lightslategray;
+}
+
 .label-box {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 400;
@@ -72,4 +76,26 @@ td {
     padding: 10px;
 }
 
+.radio {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
 
+.radio > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.radio > div label{
+    white-space: nowrap;
+    width: auto;
+}
+
+/* Ensure input size consistency */
+.radio > div input {
+    width: auto; /* Ensures radio button doesn't stretch */
+    height: auto; /* Ensure consistent height */
+    margin: 5px; /* Space between radio and label */
+}

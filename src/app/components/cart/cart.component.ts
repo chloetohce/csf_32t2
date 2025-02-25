@@ -30,6 +30,13 @@ export class CartComponent implements OnChanges, OnInit {
   ngOnInit(): void {
     this.form = this.createForm()
     this.updateCart();
+    this.form.get('delivery')?.valueChanges.subscribe(val => {
+      if (val == 'self-pickup') {
+        this.form.get('address')?.disable();
+      } else {
+        this.form.get('address')?.enable();
+      }
+    })
   }
 
   get totalPrice(): number {
@@ -56,7 +63,8 @@ export class CartComponent implements OnChanges, OnInit {
   private createForm() {
     return this.fb.group({
       name: this.fb.control<string>(''),
-      address: this.fb.control<string>(''),
+      address: this.fb.control<string>({value: '', disabled: false}),
+      delivery: this.fb.control<string>('door-delivery'),
       cart: this.fb.array([])
     })
     
